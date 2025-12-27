@@ -1,0 +1,269 @@
+.promo-section {
+  padding-top: 67px;
+  background-color: #E6DDCE;
+  font-family: 'Kanit', sans-serif;
+  color: #333;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+
+  &__main-title {
+    font-family: 'Lobster', cursive;
+    font-size: 96px;
+    line-height: 1;
+    text-align: center;
+    margin: 0 0 50px;
+    color: #000;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    margin-left: -70px;
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    flex: 1;
+    width: 500px;
+    margin-left: 140px;
+  }
+
+  &__subtitle {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+    color: #000;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 30px;
+    color: #555;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &--primary {
+      background-color: #734432;
+      color: #EEE8DC;
+      &:hover { background-color: #D2BF9A; transform: translateY(-2px); }
+    }
+
+    &--secondary {
+      background-color: #734432;
+      color: #EEE8DC;
+      &:hover { background-color: #D2BF9A; transform: translateY(-2px); }
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    img {
+      max-width: 100%;
+      height: auto;
+      
+      
+    }
+  }
+
+  &__products {
+    text-align: center;
+  }
+
+  &__products-title {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    margin: -40px 0 40px;
+    color: #000;
+  }
+
+  &__products-list {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    flex-wrap: wrap;
+  }
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+
+  &__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  &:hover .card__img {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 1200px) {
+  .promo-section {
+    &__main-title {
+      font-size: 80px;
+      margin-bottom: 40px;
+    }
+
+    &__inner {
+      margin-left: 80px;
+      gap: 80px;
+    }
+
+    &__subtitle {
+      font-size: 42px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .promo-section {
+    &__main-title {
+      font-size: 70px;
+      margin-bottom: 35px;
+    }
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      text-align: center;
+      gap: 40px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__subtitle {
+      font-size: 38px;
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
+
+    &__products-list {
+      gap: 50px;
+    }
+  }
+
+  .card {
+    &__img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-section {
+    padding-top: 40px;
+
+    &__main-title {
+      font-size: 56px;
+      margin-bottom: 30px;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__products-title {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    &__products-list {
+      gap: 40px;
+    }
+  }
+
+  .card {
+    &__img {
+      width: 120px;
+      height: 120px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-section {
+    &__main-title {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    &__subtitle {
+      font-size: 28px;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      align-items: center;
+      .promo-section__btn {
+        width: 200px;
+      }
+    }
+
+    &__products-list {
+      gap: 30px;
+    }
+  }
+
+  .card {
+    &__img {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__name {
+      font-size: 15px;
+    }
+  }
+}

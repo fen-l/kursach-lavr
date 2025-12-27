@@ -1,0 +1,321 @@
+.cards-section {
+  padding-top: 40px;
+  background-color: #E6DDCE;
+  font-family: 'Kanit', sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 111px;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+
+  &__img {
+    width: 215px;
+    height: 215px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0px;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+    max-width: 220px;
+  }
+
+  &:hover {
+    .card__img {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.catalog{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 78px 129px 0 131px;
+  gap: 20px;
+  
+  &__card{
+    background-color: #F6EFE1;
+    border-radius: 20px;
+    width: 100%;
+    height: 361px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-size: contain;
+    background-position: center;
+
+    &-chocolate-cookie,
+    &-cookie {
+      background-image: url(../../Images/cookie.png);
+    }
+    
+    &-croissant {
+      background-image: url(../../Images/croissant.png);
+    }
+    
+    &-cinnamon-rolls {
+      background-image: url(../../Images/cinnamonshop.png);
+    }
+    
+    &-donuts {
+      background-image: url(../../Images/donuts.png);
+    }
+    
+    &-baguette {
+      background-image: url(../../Images/baquette.png);
+    }
+    
+    &-bread {
+      background-image: url(../../Images/bread.png);
+    }
+    
+    &-matcha-croissant-cube {
+      background-image: url(../../Images/matcha_cube.png);
+    }
+    
+    &-almond-croissant-cube {
+      background-image: url(../../Images/almond_cube.png);
+    }
+    
+    &-white-chocolate-croissant {
+      background-image: url(../../Images/pink_cube.png);
+    }
+    
+    &-gingerbread {
+      background-image: url(../../Images/gingerbread.png);
+    }
+    
+    &-pretzel {
+      background-image: url(../../Images/pretzel.png);
+    }
+    
+    &-challah-bread {
+      background-image: url(../../Images/challah_bread.png);
+    }
+    
+    &-swiss-roll {
+      background-image: url(../../Images/swiss_roll.png);
+    }
+    
+    &-bread-sticks {
+      background-image: url(../../Images/bread_sticks.png);
+    }
+    
+    &-chocolate-muffin {
+      background-image: url(../../Images/chocolatemuff.png);
+    }
+    
+    &-muffin {
+      background-image: url(../../Images/muffin.png);
+    }
+
+    &-link{
+      line-height: 1;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: 3px;
+      cursor: pointer;
+    }
+    
+    &-title{
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+    }
+    
+    &-footer{
+      display: flex;
+      justify-content: space-between;
+      border-top: 2px solid #73443249;
+      margin: 0px 21px 9px 19px;
+      padding-top: 10px;
+    }
+    
+    &-stars{
+      width: 78px;
+      height: 14px;
+    }
+    
+    &-price{
+      font-size: 14px;
+    }
+  }
+}
+
+.news{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 73px 129px 0 131px;
+  gap: 20px;
+  &__card{
+    background-color: #F6EFE1;
+    border-radius: 20px;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+    &-link{
+      line-height: 1;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: 3px;
+      cursor: pointer;
+    }
+    &-title{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 577px;
+      padding: 0 63px;
+      display: inline-block;
+      font-size: 48px;
+      font-family: 'Lobster', Arial;
+      font-weight: 400;
+      text-align: center;
+    }
+    &-footer{
+      display: flex;
+      justify-content: space-between;
+      border-top: 2px solid #73443249;
+      margin: 0px 21px 9px 19px;
+      padding-top: 10px;
+    }
+    &-img{
+       width: 100%;
+      object-fit: cover;
+    }
+    &-description{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 539px;
+      height: 50px;
+      display: inline-block;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.304);
+       padding: 10px 37px 0px;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .cards-section {
+    padding-top: 35px;
+
+    &__list {
+      gap: 40px;
+      justify-content: space-around;
+    }
+  }
+
+  .card {
+    &__img {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 4px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 13px;
+      max-width: 190px;
+    }
+  }
+}
+
+/* Мобильные: 1 карточка в столбик */
+@media (max-width: 768px) {
+  .cards-section {
+    padding-top: 30px;
+
+    &__list {
+      gap: 35px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .card {
+    &__img {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 3px;
+    }
+
+    &__name {
+      font-size: 17px;
+    }
+
+    &__description {
+      font-size: 13px;
+      max-width: 180px;
+    }
+  }
+}
+
+/* Маленькие экраны */
+@media (max-width: 480px) {
+  .cards-section {
+    padding-top: 25px;
+
+    .container {
+      padding: 0 10px;
+    }
+
+    &__list {
+      gap: 30px;
+    }
+  }
+
+  .card {
+    &__img {
+      width: 140px;
+      height: 140px;
+      border: 2.5px dashed #734432;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__description {
+      font-size: 12px;
+      max-width: 160px;
+    }
+  }
+}

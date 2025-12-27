@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Than A Bakery</title>
+
+    <link rel="stylesheet" href="Scss/Components/cards.css">
+    <link rel="stylesheet" href="Scss/Components/footer.css">
+    <link rel="stylesheet" href="Scss/Components/header.css">
+    <link rel="stylesheet" href="Scss/Components/offers.css">
+    <link rel="stylesheet" href="Scss/Components/promo-section.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JejuHallasan&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="other-header">
+
+
+        <nav class="general-menu">
+            <ul class="menu__options">
+                <div class="menu__left">
+                    <li><a href="Main_page.html">Home</a></li>
+                    <li><a href="AboutUs_page.html">About</a></li>
+                    <li>Menu <img src="./Images/strelka.png" alt="Logo 2"></li>
+                </div>
+                <div class="menu__right">
+                    <li>Blog</li>
+                    <li><a href="Offer_page.html">Offer</a></li>
+                    <li>Contact Us</li>
+                    <li class="menu__icon cart">
+                        <button class="cart__btn">
+                            <img src="./Images/basket.png" alt="Cart" class="icon">
+                            <span class="cart__count">0</span>
+                        </button>
+                    </li>
+                    <li class="menu__icon search">
+                        <button class="search__btn">
+                            <img src="./Images/search-bold.png" alt="Search" class="icon">
+                        </button>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+        <div class="hero">
+            <img class="hero__title" src="Images/recentNews.png">
+        </div>
+    </header>
+    <section class="news">
+       <div class="news__card">
+            <img src="Images/new-opened.png" class="news__card-img" alt="new">
+            <div class="news__card-content">
+                <h2 class="news__card-title">We have opened a new branch</h2>
+                <div class="news__card-footer">
+                    <p class="news__card-description">In Australia on 89th Street we finally opened a new branch and to
+                        celebrate this we have 25% discounts</p>
+                </div>
+            </div>
+        </div>
+        <div class="news__card">
+            <img src="Images/new2.png" class="news__card-img" alt="new">
+            <div class="news__card-content">
+                <h2 class="news__card-title">New Seasonal Delight: Pumpkin Spice & Apple Cinnamon Pastries Are Here!</h2>
+                <div class="news__card-footer">
+                    <p class="news__card-description">Fall flavors are back! Try our limited-edition pumpkin spice croissants and apple cinnamon rolls—warm, aromatic, and perfect with coffee.</p>
+                </div>
+            </div>
+        </div>
+        <div class="news__card">
+            <img src="Images/new3.png" class="news__card-img" alt="new">
+            <div class="news__card-content">
+                <h2 class="news__card-title">Behind the Scenes: How Our Artisans Craft the Perfect Sourdough</h2>
+                <div class="news__card-footer">
+                    <p class="news__card-description">Ever wondered why our sourdough is so irresistible? Meet our bakers and learn about the 24-hour fermentation magic!</p>
+                </div>
+            </div>
+        </div>
+        <div class="news__card">
+            <img src="Images/new4.png" class="news__card-img" alt="new">
+            <div class="news__card-content">
+                <h2 class="news__card-title">Vegan & Gluten-Free? Now Enjoy Our Decadent Chocolate Avocado Cake!</h2>
+                <div class="news__card-footer">
+                    <p class="news__card-description">We’ve expanded our menu with a rich, fudgy vegan cake—guilt-free indulgence without compromising on taste.</p>
+                </div>
+            </div>
+        </div>
+        <div class="news__card">
+            <img src="Images/new5.png" class="news__card-img" alt="new">
+            <div class="news__card-content">
+                <h2 class="news__card-title">Customer Favorite: Our Red Velvet Cupcake Wins ‘Best Dessert 2024’!</h2>
+                <div class="news__card-footer">
+                    <p class="news__card-description">In Australia on 89th Street we finally opened a new branch and to
+                        celebrate this we have 25% discounts</p>
+                </div>
+            </div>
+        </div>
+        <div class="news__card">
+            <img src="Images/new6.png" class="news__card-img" alt="new">
+            <div class="news__card-content">
+                <h2 class="news__card-title">Sweet Charity: For Every Cake Sold, We Donate to Food Banks</h2>
+                <div class="news__card-footer">
+                    <p class="news__card-description">Voted by locals, our creamy red velvet cupcake with mascarpone frosting is now award-winning. Come taste the champion!</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script>
+        const menu = document.querySelector('.general-menu');
+        const header = document.querySelector('.hero-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight - 80) {
+                menu.classList.add('scrolled');
+            } else {
+                menu.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="subscribe">
+                <div class="subscribe__inner">
+                    <div class="subscribe__content">
+                        <h2 class="subscribe__title">Subscribe to always know<br>about discounts and new<br>products!
+                        </h2>
+                    </div>
+                    <form class="subscribe__form">
+                        <input type="email" placeholder="Your email" class="subscribe__input">
+                        <button type="submit" class="subscribe__btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+
+
+            <div class="footer__columns">
+
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Contact Us</h3>
+                    <p class="footer__text">PO Box Collins Victoria 3000 Australia</p>
+                    <p class="footer__text">Email: bakery@email.com</p>
+                    <p class="footer__text">Phone: +33 33 44455</p>
+                    <p class="footer__text">Fax: +33 444 555</p>
+                </div>
+
+                <div class="footer__logo">
+                    <div class="footer__logo-circle">
+                        <span class="footer__img"><img src="./Images/logo_header1.png"></span>
+                        <h3 class="footer__logo-title">More Than<br>A Bakery</h3>
+                        <div class="footer__socials">
+                            <a href="#" class="footer__social-link">
+                                <img src="./Images/twitter.png" alt="Twitter">
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <img src="./Images/telegram.png" alt="Telegram">
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <img src="./Images/instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Utility Pages</h3>
+                    <p class="footer__text">Style Guide</p>
+                    <p class="footer__text">Password Protected</p>
+                    <p class="footer__text">Licences</p>
+                    <p class="footer__text">Changelog</p>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                Copyright © More Than A Bakery
+            </div>
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+@charset "UTF-8";
+.promo-section {
+  padding-top: 67px;
+  background-color: #E6DDCE;
+  font-family: "Kanit", sans-serif;
+  color: #333;
+}
+.promo-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.promo-section__main-title {
+  font-family: "Lobster", cursive;
+  font-size: 96px;
+  line-height: 1;
+  text-align: center;
+  margin: 0 0 50px;
+  color: #000;
+}
+.promo-section__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  margin-left: -70px;
+  margin-bottom: 80px;
+}
+.promo-section__content {
+  flex: 1;
+  width: 500px;
+  margin-left: 140px;
+}
+.promo-section__subtitle {
+  font-family: "Lobster", cursive;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 15px;
+  color: #000;
+}
+.promo-section__text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 30px;
+  color: #555;
+}
+.promo-section__buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.promo-section__btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.promo-section__btn--primary {
+  background-color: #734432;
+  color: #EEE8DC;
+}
+.promo-section__btn--primary:hover {
+  background-color: #D2BF9A;
+  transform: translateY(-2px);
+}
+.promo-section__btn--secondary {
+  background-color: #734432;
+  color: #EEE8DC;
+}
+.promo-section__btn--secondary:hover {
+  background-color: #D2BF9A;
+  transform: translateY(-2px);
+}
+.promo-section__image {
+  flex-shrink: 0;
+}
+.promo-section__image img {
+  max-width: 100%;
+  height: auto;
+}
+.promo-section__products {
+  text-align: center;
+}
+.promo-section__products-title {
+  font-family: "Lobster", cursive;
+  font-size: 48px;
+  margin: -40px 0 40px;
+  color: #000;
+}
+.promo-section__products-list {
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  flex-wrap: wrap;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+.promo__img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 5px;
+}
+.promo__name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.promo:hover .card__img {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 1200px) {
+  .promo-section__main-title {
+    font-size: 80px;
+    margin-bottom: 40px;
+  }
+  .promo-section__inner {
+    margin-left: 80px;
+    gap: 80px;
+  }
+  .promo-section__subtitle {
+    font-size: 42px;
+  }
+}
+@media (max-width: 992px) {
+  .promo-section__main-title {
+    font-size: 70px;
+    margin-bottom: 35px;
+  }
+  .promo-section__inner {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+    gap: 40px;
+  }
+  .promo-section__content {
+    max-width: 100%;
+  }
+  .promo-section__subtitle {
+    font-size: 38px;
+  }
+  .promo-section__buttons {
+    justify-content: center;
+  }
+  .promo-section__products-list {
+    gap: 50px;
+  }
+  .card__img {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .promo-section {
+    padding-top: 40px;
+  }
+  .promo-section__main-title {
+    font-size: 56px;
+    margin-bottom: 30px;
+  }
+  .promo-section__subtitle {
+    font-size: 32px;
+  }
+  .promo-section__text {
+    font-size: 15px;
+  }
+  .promo-section__products-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .promo-section__products-list {
+    gap: 40px;
+  }
+  .card__img {
+    width: 120px;
+    height: 120px;
+  }
+  .card__name {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .promo-section__main-title {
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+  .promo-section__subtitle {
+    font-size: 28px;
+  }
+  .promo-section__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo-section__buttons .promo-section__btn {
+    width: 200px;
+  }
+  .promo-section__products-list {
+    gap: 30px;
+  }
+  .card__img {
+    width: 100px;
+    height: 100px;
+  }
+  .card__name {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=promo-section.css.map */

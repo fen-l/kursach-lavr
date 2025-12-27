@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Kanit:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.offer__container {
+  background: #E6DDCE;
+  color: #000;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.offer__grid, .offer__custom, .offer__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 20px;
+  justify-content: center;
+}
+.offer__title {
+  grid-column: span 2;
+  grid-column-start: 2;
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+  font-size: 96px;
+  text-align: center;
+  color: #000;
+  margin: 0 0 60px 0;
+  line-height: 1.1;
+}
+.offer__gallery {
+  margin-bottom: 73px;
+}
+.offer__gallery-img {
+  width: 100%;
+  height: 486px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.offer__custom-img {
+  grid-column: span 2;
+  width: 100%;
+  height: 630px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.offer__custom-content {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px 0;
+}
+.offer__custom-title {
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+  font-size: 96px;
+  color: #000;
+  margin: 0;
+  line-height: 1.2;
+}
+.offer__custom-text {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+.offer__custom-btn {
+  align-self: flex-start;
+  background: #8B5A2B;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.offer__custom-btn:hover {
+  background: rgb(107.8395604396, 69.8241758242, 33.3604395604);
+}
+.offer__custom-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.offer__custom-input {
+  padding: 14px 20px;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  background: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  min-width: 240px;
+  outline: none;
+}
+.offer__custom-input::-moz-placeholder {
+  color: #aaa;
+}
+.offer__custom-input::placeholder {
+  color: #aaa;
+}
+.offer__custom-submit {
+  background: #D2B48C;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.offer__custom-submit:hover {
+  background: rgb(195.65625, 156.09375, 103.34375);
+}/*# sourceMappingURL=offers.css.map */

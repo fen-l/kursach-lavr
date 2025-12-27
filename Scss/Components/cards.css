@@ -1,0 +1,268 @@
+@charset "UTF-8";
+.cards-section {
+  padding-top: 40px;
+  background-color: #E6DDCE;
+  font-family: "Kanit", sans-serif;
+}
+.cards-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.cards-section__list {
+  display: flex;
+  justify-content: center;
+  gap: 111px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+.card__img {
+  width: 215px;
+  height: 215px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card__name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0px;
+}
+.card__description {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+  max-width: 220px;
+}
+.card:hover .card__img {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 78px 129px 0 131px;
+  gap: 20px;
+}
+.catalog__card {
+  background-color: #F6EFE1;
+  border-radius: 20px;
+  width: 100%;
+  height: 361px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-size: contain;
+  background-position: center;
+}
+.catalog__card-chocolate-cookie, .catalog__card-cookie {
+  background-image: url(../../Images/cookie.png);
+}
+.catalog__card-croissant {
+  background-image: url(../../Images/croissant.png);
+}
+.catalog__card-cinnamon-rolls {
+  background-image: url(../../Images/cinnamonshop.png);
+}
+.catalog__card-donuts {
+  background-image: url(../../Images/donuts.png);
+}
+.catalog__card-baguette {
+  background-image: url(../../Images/baquette.png);
+}
+.catalog__card-bread {
+  background-image: url(../../Images/bread.png);
+}
+.catalog__card-matcha-croissant-cube {
+  background-image: url(../../Images/matcha_cube.png);
+}
+.catalog__card-almond-croissant-cube {
+  background-image: url(../../Images/almond_cube.png);
+}
+.catalog__card-white-chocolate-croissant {
+  background-image: url(../../Images/pink_cube.png);
+}
+.catalog__card-gingerbread {
+  background-image: url(../../Images/gingerbread.png);
+}
+.catalog__card-pretzel {
+  background-image: url(../../Images/pretzel.png);
+}
+.catalog__card-challah-bread {
+  background-image: url(../../Images/challah_bread.png);
+}
+.catalog__card-swiss-roll {
+  background-image: url(../../Images/swiss_roll.png);
+}
+.catalog__card-bread-sticks {
+  background-image: url(../../Images/bread_sticks.png);
+}
+.catalog__card-chocolate-muffin {
+  background-image: url(../../Images/chocolatemuff.png);
+}
+.catalog__card-muffin {
+  background-image: url(../../Images/muffin.png);
+}
+.catalog__card-link {
+  line-height: 1;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.catalog__card-title {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+.catalog__card-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid rgba(115, 68, 50, 0.2862745098);
+  margin: 0px 21px 9px 19px;
+  padding-top: 10px;
+}
+.catalog__card-stars {
+  width: 78px;
+  height: 14px;
+}
+.catalog__card-price {
+  font-size: 14px;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 73px 129px 0 131px;
+  gap: 20px;
+}
+.news__card {
+  background-color: #F6EFE1;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.news__card-link {
+  line-height: 1;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.news__card-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 577px;
+  padding: 0 63px;
+  display: inline-block;
+  font-size: 48px;
+  font-family: "Lobster", Arial;
+  font-weight: 400;
+  text-align: center;
+}
+.news__card-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid rgba(115, 68, 50, 0.2862745098);
+  margin: 0px 21px 9px 19px;
+  padding-top: 10px;
+}
+.news__card-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news__card-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 539px;
+  height: 50px;
+  display: inline-block;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.304);
+  padding: 10px 37px 0px;
+}
+
+@media (max-width: 1024px) {
+  .cards-section {
+    padding-top: 35px;
+  }
+  .cards-section__list {
+    gap: 40px;
+    justify-content: space-around;
+  }
+  .card__img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 4px;
+  }
+  .card__name {
+    font-size: 18px;
+  }
+  .card__description {
+    font-size: 13px;
+    max-width: 190px;
+  }
+}
+/* Мобильные: 1 карточка в столбик */
+@media (max-width: 768px) {
+  .cards-section {
+    padding-top: 30px;
+  }
+  .cards-section__list {
+    gap: 35px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 3px;
+  }
+  .card__name {
+    font-size: 17px;
+  }
+  .card__description {
+    font-size: 13px;
+    max-width: 180px;
+  }
+}
+/* Маленькие экраны */
+@media (max-width: 480px) {
+  .cards-section {
+    padding-top: 25px;
+  }
+  .cards-section .container {
+    padding: 0 10px;
+  }
+  .cards-section__list {
+    gap: 30px;
+  }
+  .card__img {
+    width: 140px;
+    height: 140px;
+    border: 2.5px dashed #734432;
+  }
+  .card__name {
+    font-size: 16px;
+  }
+  .card__description {
+    font-size: 12px;
+    max-width: 160px;
+  }
+}/*# sourceMappingURL=cards.css.map */

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Kanit:wght@400;500;700&display=swap');
+
+$font-heading: 'Lobster', cursive;
+$font-text: 'Kanit', sans-serif;
+$bg-color: #E6DDCE;
+$text-color: #000;
+$btn-primary: #8B5A2B;
+$btn-secondary: #D2B48C;
+$input-bg: #FFF;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.offer {
+  &__container {
+    background: $bg-color;
+  color: $text-color;
+  font-family: $font-text;
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // === ГРИД-ОСНОВА: 4 колонки по 270px ===
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  // === ЗАГОЛОВОК: 2 колонки, по центру ===
+  &__title {
+    grid-column: span 2;           // занимает 2 колонки
+    grid-column-start: 2;          // начинается со 2-й колонки (центрирование)
+    font-family: $font-heading;
+    font-weight: normal;
+    font-size: 96px;
+    text-align: center;
+    color: #000;
+    margin: 0 0 60px 0;
+    line-height: 1.1;
+  }
+
+  // === ГАЛЕРЕЯ: 4 изображения ===
+  &__gallery {
+    @extend .offer__grid;
+    margin-bottom: 73px;           // отступ до следующего блока
+  }
+
+  &__gallery-img {
+    width: 100%;
+    height: 486px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+  }
+
+  // === КАСТОМНЫЕ ЗАКАЗЫ: 2 + 2 колонки ===
+  &__custom {
+    @extend .offer__grid;
+  }
+
+  &__custom-img {
+    grid-column: span 2;
+    width: 100%;
+    height: 630px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+  }
+
+  &__custom-content {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 10px 0;
+  }
+
+  &__custom-title {
+    font-family: $font-heading;
+    font-weight: normal;
+    font-size: 96px;
+    color: #000;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  &__custom-text {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+  }
+
+  &__custom-btn {
+    align-self: flex-start;
+    background: $btn-primary;
+    color: white;
+    font-family: $font-text;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background .2s;
+
+    &:hover {
+      background: darken($btn-primary, 8%);
+    }
+  }
+
+  &__custom-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  &__custom-input {
+    padding: 14px 20px;
+    font-family: $font-text;
+    font-size: 20px;
+    background: $input-bg;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    min-width: 240px;
+    outline: none;
+
+    &::placeholder { color: #aaa; }
+  }
+
+  &__custom-submit {
+    background: $btn-secondary;
+    color: white;
+    font-family: $font-text;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background .2s;
+
+    &:hover {
+      background: darken($btn-secondary, 10%);
+    }
+  }
+}
