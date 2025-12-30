@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="Scss/Components/header.css">
     <link rel="stylesheet" href="Scss/Components/offers.css">
     <link rel="stylesheet" href="Scss/Components/promo-section.css">
-      <script src="Js/menu.js"></script>
+    <script src="Js/menu.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&display=swap"
@@ -22,8 +22,10 @@
 </head>
 
 <body>
-    <header class="other-header">
-<nav class="general-menu">
+    <header class="hero-header">
+
+
+        <nav class="general-menu">
             <ul class="menu__options">
                 <div class="menu__left">
                     <li><a href="Main_page.html">Home</a></li>
@@ -48,6 +50,8 @@
                 </div>
             </ul>
         </nav>
+
+
         <button class="mobile-menu-button" aria-label="Открыть меню" aria-expanded="false">
             <span></span>
             <span></span>
@@ -81,76 +85,43 @@
                 </ul>
             </div>
         </nav>
-        <div class="hero">
-            <a class="hero__logo-link">
+
+
+        <section class="banner">
+
+            <a class="banner__logo-link">
                 <img src="./Images/logo_header1.png" alt="Logo">
             </a>
-            <h1 class="hero__text">Resent News</h1>
-        </div>
+
+            <div class="banner__content">
+                <h1 class="banner_text_welcome">Welcome to</h1>
+                <h1 class="banner_text">More Than</h1>
+                <h1 class="banner_text">A Bakery</h1>
+            </div>
+
+
+        </section>
     </header>
-    <section class="news">
-       <div class="news__card">
-            <img src="Images/new-opened.png" class="news__card-img" alt="new">
-            <div class="news__card-content">
-                <h2 class="news__card-title">We have opened a new branch</h2>
-                <div class="news__card-footer">
-                    <p class="news__card-description">In Australia on 89th Street we finally opened a new branch and to
-                        celebrate this we have 25% discounts</p>
-                </div>
-            </div>
-        </div>
-        <div class="news__card">
 
-            <img src="Images/new2.png" class="news__card-img" alt="new">
-            <div class="news__card-content">
-                <h2 class="news__card-title">New Seasonal Delight: Pumpkin Spice & Apple Cinnamon Pastries Are Here!</h2>
-                <div class="news__card-footer">
-                    <p class="news__card-description">Fall flavors are back! Try our limited-edition pumpkin spice croissants and apple cinnamon rolls—warm, aromatic, and perfect with coffee.</p>
-                </div>
-            </div>
-        </div>
-        <div class="news__card">
-            <img src="Images/new3.png" class="news__card-img" alt="new">
-            <div class="news__card-content">
-                <h2 class="news__card-title">Behind the Scenes: How Our Artisans Craft the Perfect Sourdough</h2>
-                <div class="news__card-footer">
-                    <p class="news__card-description">Ever wondered why our sourdough is so irresistible? Meet our bakers and learn about the 24-hour fermentation magic!</p>
-                </div>
-            </div>
-        </div>
-        <div class="news__card">
-            <img src="Images/new4.png" class="news__card-img" alt="new">
-            <div class="news__card-content">
-                <h2 class="news__card-title">Vegan & Gluten-Free? Now Enjoy Our Decadent Chocolate Avocado Cake!</h2>
-                <div class="news__card-footer">
-                    <p class="news__card-description">We’ve expanded our menu with a rich, fudgy vegan cake—guilt-free indulgence without compromising on taste.</p>
-                </div>
-            </div>
-        </div>
-        <div class="news__card">
-            <img src="Images/new5.png" class="news__card-img" alt="new">
-            <div class="news__card-content">
-                <h2 class="news__card-title">Customer Favorite: Our Red Velvet Cupcake Wins ‘Best Dessert 2024’!</h2>
-                <div class="news__card-footer">
-                    <p class="news__card-description">In Australia on 89th Street we finally opened a new branch and to
-                        celebrate this we have 25% discounts</p>
-                </div>
-            </div>
-        </div>
-        <div class="news__card">
-            <img src="Images/new6.png" class="news__card-img" alt="new">
-            <div class="news__card-content">
-                <h2 class="news__card-title">Sweet Charity: For Every Cake Sold, We Donate to Food Banks</h2>
-                <div class="news__card-footer">
-                    <p class="news__card-description">Voted by locals, our creamy red velvet cupcake with mascarpone frosting is now award-winning. Come taste the champion!</p>
-                </div>
-            </div>
-        </div>
-
-
+    <section class="error">
+        <h1 class="error__title">Error 404</h1>
+          <h2 class="error__title">Страница не найдена</h2>
     </section>
 
 
+
+    <script>
+        const menu = document.querySelector('.general-menu');
+        const header = document.querySelector('.hero-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight - 80) {
+                menu.classList.add('scrolled');
+            } else {
+                menu.classList.remove('scrolled');
+            }
+        });
+    </script>
 
     <footer class="footer">
         <div class="container">

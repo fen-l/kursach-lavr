@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="Scss/Components/header.css">
   <link rel="stylesheet" href="Scss/Components/offers.css">
   <link rel="stylesheet" href="Scss/Components/promo-section.css">
+  <script src="Js/menu.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&display=swap"
@@ -22,22 +23,20 @@
 
 <body>
   <header class="hero-header">
-
-
     <nav class="general-menu">
       <ul class="menu__options">
         <div class="menu__left">
-          <li><a href="Main_page.html">Home</a></li>
+          <li>Home</li>
           <li><a href="AboutUs_page.html">About</a></li>
-          <li>Menu <img src="./Images/strelka.png" alt="Logo 2"></li>
+          <li><a href="Error_page.html">Menu <img src="./Images/strelka.png" alt="Logo 2"></a></li>
         </div>
         <div class="menu__right">
-          <li><a href="ResentNews_page.html">Blog</a></li>
+          <li><a href="Error_page.html">Blog</a></li>
           <li><a href="Offer_page.html">Offer</a></li>
-          <li>Contact Us</li>
+          <li><a href="Error_page.html">Contact Us</a></li>
           <li class="menu__icon cart">
             <button class="cart__btn">
-              <a href="Shop_page.html"><img src="./Images/basket.png" alt="Cart" class="icon"></a>
+              <img src="./Images/basket.png" alt="Cart" class="icon">
               <span class="cart__count">0</span>
             </button>
           </li>
@@ -48,6 +47,41 @@
           </li>
         </div>
       </ul>
+    </nav>
+
+
+    <button class="mobile-menu-button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__content">
+        <ul class="menu__options">
+          <div class="menu__left">
+            <li><a href="Main_page.html">Home</a></li>
+            <li><a href="AboutUs_page.html">About</a></li>
+            <li>Menu <img src="./Images/strelka.png" alt="Logo 2"></li>
+          </div>
+          <div class="menu__right">
+            <li>Blog</li>
+            <li><a href="Offer_page.html">Offer</a></li>
+            <li>Contact Us</li>
+            <li class="menu__icon cart">
+              <button class="cart__btn">
+                <img src="./Images/basket.png" alt="Cart" class="icon">
+                <span class="cart__count">0</span>
+              </button>
+            </li>
+            <li class="menu__icon search">
+              <button class="search__btn">
+                <img src="./Images/search-bold.png" alt="Search" class="icon">
+              </button>
+            </li>
+          </div>
+        </ul>
+      </div>
     </nav>
 
 
@@ -80,13 +114,13 @@
             </a>
 
             <a class="card">
-              <img src="Images/beginner.png" class="card__img" alt="beginner">
+              <img src="Images/card22.png" class="card__img" alt="beginner">
               <span class="card__name">Wedding Cakes</span>
               <span class="card__description">We can bake a quality cake for your wedding</span>
             </a>
 
             <a class="card">
-              <img src="Images/beginner.png" class="card__img" alt="beginner">
+              <img src="Images/card33.png" class="card__img" alt="beginner">
               <span class="card__name">Home Delivery</span>
               <span class="card__description">We deliver to your home all over the country</span>
             </a>

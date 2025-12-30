@@ -15,27 +15,28 @@ body {
 
 .team__container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 86px;
   text-align: center;
 }
 .team__title {
   font-family: "Lobster", cursive;
   font-size: 48px;
   color: #734432;
-  margin-bottom: 24px;
+  margin: 29px 0 -1px;
 }
 .team__desc {
   max-width: 960px;
   margin: 0 auto 60px;
   font-size: 20px;
   color: #555;
+  line-height: 1.5;
+  margin-bottom: 27px;
 }
 .team__grid {
   display: grid;
   grid-template-columns: repeat(3, 318px);
   grid-auto-rows: 426px;
-  gap: 25px;
-  justify-content: center;
+  gap: 20px;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -49,27 +50,31 @@ body {
   flex-direction: column;
   transition: all 0.25s ease;
 }
+.team__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .team__card:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
 }
 .team__card-img {
-  width: 318px;
-  height: 346px;
+  width: 324px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
 .team__card-body {
-  padding: 18px 20px;
+  padding: 4px 17px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 .team__card-name {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   color: #000;
 }
@@ -77,6 +82,7 @@ body {
   font-size: 16px;
   color: #777;
   margin-bottom: 8px;
+  text-align: left;
 }
 .team__card-social {
   display: flex;
@@ -108,4 +114,252 @@ body {
 .team__card-social-link:nth-child(3) {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>');
           mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>');
+}
+
+@media (max-width: 1200px) {
+  .team__container {
+    max-width: 1000px;
+    margin-bottom: 70px;
+    padding: 0 20px;
+  }
+  .team__title {
+    font-size: 42px;
+    margin: 25px 0 5px;
+  }
+  .team__desc {
+    max-width: 800px;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .team__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 25px;
+    width: 100%;
+  }
+  .team__card-img {
+    width: 100%;
+    height: 280px;
+  }
+}
+@media (max-width: 992px) {
+  .team__container {
+    max-width: 800px;
+    margin-bottom: 60px;
+  }
+  .team__title {
+    font-size: 38px;
+    margin: 20px 0 10px;
+  }
+  .team__desc {
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .team__card-img {
+    height: 250px;
+  }
+  .team__card-body {
+    padding: 12px 15px;
+  }
+  .team__card-name {
+    font-size: 19px;
+  }
+  .team__card-role {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .team__container {
+    margin-bottom: 50px;
+    padding: 0 15px;
+  }
+  .team__title {
+    font-size: 34px;
+    margin: 15px 0 15px;
+  }
+  .team__desc {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  .team__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 25px;
+  }
+  .team__card-img {
+    height: 280px;
+  }
+  .team__card-body {
+    padding: 15px 20px;
+  }
+  .team__card-name {
+    font-size: 20px;
+  }
+  .team__card-role {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .team__container {
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+  .team__title {
+    font-size: 30px;
+    margin: 10px 0 20px;
+  }
+  .team__desc {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .team__grid {
+    gap: 20px;
+    max-width: 350px;
+  }
+  .team__card-img {
+    height: 240px;
+  }
+  .team__card-body {
+    padding: 12px 15px;
+  }
+  .team__card-name {
+    font-size: 18px;
+  }
+  .team__card-role {
+    font-size: 14px;
+  }
+  .team__card-social-link {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .team__container {
+    margin-bottom: 35px;
+  }
+  .team__title {
+    font-size: 28px;
+    margin: 8px 0 15px;
+  }
+  .team__desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .team__grid {
+    max-width: 300px;
+    gap: 18px;
+  }
+  .team__card {
+    border-radius: 15px;
+  }
+  .team__card-img {
+    height: 220px;
+  }
+  .team__card-body {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .team__card-name {
+    font-size: 17px;
+  }
+  .team__card-role {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .team__card-social {
+    gap: 12px;
+  }
+  .team__card-social-link {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 375px) {
+  .team__container {
+    margin-bottom: 30px;
+    padding: 0 8px;
+  }
+  .team__title {
+    font-size: 26px;
+    margin: 5px 0 12px;
+  }
+  .team__desc {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .team__grid {
+    max-width: 280px;
+    gap: 15px;
+  }
+  .team__card {
+    border-radius: 12px;
+  }
+  .team__card-img {
+    height: 200px;
+  }
+  .team__card-body {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .team__card-name {
+    font-size: 16px;
+  }
+  .team__card-role {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .team__card-social {
+    gap: 10px;
+  }
+  .team__card-social-link {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .team__container {
+    margin-bottom: 25px;
+  }
+  .team__title {
+    font-size: 24px;
+    margin: 3px 0 10px;
+  }
+  .team__desc {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .team__grid {
+    max-width: 260px;
+    gap: 12px;
+  }
+  .team__card {
+    border-radius: 10px;
+  }
+  .team__card-img {
+    height: 180px;
+  }
+  .team__card-body {
+    padding: 6px 8px;
+    gap: 5px;
+  }
+  .team__card-name {
+    font-size: 15px;
+  }
+  .team__card-role {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .team__card-social {
+    gap: 8px;
+  }
+  .team__card-social-link {
+    width: 12px;
+    height: 12px;
+  }
 }/*# sourceMappingURL=aboutus.css.map */

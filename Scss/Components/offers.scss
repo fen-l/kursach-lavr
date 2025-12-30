@@ -13,40 +13,30 @@ $input-bg: #FFF;
 .offer {
   &__container {
     background: $bg-color;
-  color: $text-color;
-  font-family: $font-text;
-  font-size: 20px;
-  line-height: 1.6;
-  padding: 60px 20px;
+    color: $text-color;
+    font-family: $font-text;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 60px 20px 0;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 83px;
   }
 
-  // === ГРИД-ОСНОВА: 4 колонки по 270px ===
-  &__grid {
+  &__title {
+    font-family: $font-heading;
+    font-weight: normal;
+    font-size: 96px;
+    color: #000;
+    margin: 0 0 13px 0;
+    line-height: 1.1;
+  }
+
+  &__gallery {
     display: grid;
     grid-template-columns: repeat(4, 270px);
     gap: 20px;
     justify-content: center;
-  }
-
-  // === ЗАГОЛОВОК: 2 колонки, по центру ===
-  &__title {
-    grid-column: span 2;           // занимает 2 колонки
-    grid-column-start: 2;          // начинается со 2-й колонки (центрирование)
-    font-family: $font-heading;
-    font-weight: normal;
-    font-size: 96px;
-    text-align: center;
-    color: #000;
-    margin: 0 0 60px 0;
-    line-height: 1.1;
-  }
-
-  // === ГАЛЕРЕЯ: 4 изображения ===
-  &__gallery {
-    @extend .offer__grid;
-    margin-bottom: 73px;           // отступ до следующего блока
+    margin-bottom: 73px;
   }
 
   &__gallery-img {
@@ -57,14 +47,15 @@ $input-bg: #FFF;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
   }
 
-  // === КАСТОМНЫЕ ЗАКАЗЫ: 2 + 2 колонки ===
   &__custom {
-    @extend .offer__grid;
+    display: flex;
+    gap: 61px;
+    justify-content: center;
+    padding-left: 10px;
   }
 
   &__custom-img {
-    grid-column: span 2;
-    width: 100%;
+    width: min(100%, max(560px, 2vw));
     height: 630px;
     object-fit: cover;
     border-radius: 20px;
@@ -72,10 +63,7 @@ $input-bg: #FFF;
   }
 
   &__custom-content {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+   
     padding: 10px 0;
   }
 
@@ -84,28 +72,30 @@ $input-bg: #FFF;
     font-weight: normal;
     font-size: 96px;
     color: #000;
-    margin: 0;
+    margin-top: 6px;
     line-height: 1.2;
   }
 
   &__custom-text {
     font-size: 20px;
     color: #333;
-    margin: 0;
+    
   }
 
   &__custom-btn {
-    align-self: flex-start;
+    display: block;
+    width: 162px;
     background: $btn-primary;
     color: white;
     font-family: $font-text;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
-    padding: 14px 32px;
+    padding: 10px 0px;
     border: none;
-    border-radius: 50px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background .2s;
+    margin: 83px auto 0;
 
     &:hover {
       background: darken($btn-primary, 8%);
@@ -128,7 +118,9 @@ $input-bg: #FFF;
     min-width: 240px;
     outline: none;
 
-    &::placeholder { color: #aaa; }
+    &::placeholder {
+      color: #aaa;
+    }
   }
 
   &__custom-submit {
@@ -145,6 +137,291 @@ $input-bg: #FFF;
 
     &:hover {
       background: darken($btn-secondary, 10%);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .offer {
+    &__container {
+      padding: 50px 15px 0;
+      margin-bottom: 70px;
+    }
+    
+    &__title {
+      font-size: 80px;
+      margin-bottom: 15px;
+    }
+    
+    &__gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+    
+    &__gallery-img {
+      height: 400px;
+    }
+    
+    &__custom {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding-left: 0;
+    }
+    
+    &__custom-img {
+      width: 100%;
+      max-width: 600px;
+      height: 500px;
+    }
+    
+    &__custom-content {
+      max-width: 600px;
+      text-align: center;
+    }
+    
+    &__custom-title {
+      font-size: 80px;
+      margin-top: 0;
+    }
+    
+    &__custom-btn {
+      margin: 60px auto 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    &__container {
+      padding: 40px 12px 0;
+      margin-bottom: 60px;
+    }
+    
+    &__title {
+      font-size: 60px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    &__gallery {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto 50px;
+      gap: 20px;
+    }
+    
+    &__gallery-img {
+      height: 350px;
+    }
+    
+    &__custom {
+      gap: 30px;
+    }
+    
+    &__custom-img {
+      height: 400px;
+      max-width: 500px;
+    }
+    
+    &__custom-content {
+      max-width: 500px;
+    }
+    
+    &__custom-title {
+      font-size: 60px;
+    }
+    
+    &__custom-text {
+      font-size: 18px;
+    }
+    
+    &__custom-btn {
+      width: 140px;
+      font-size: 18px;
+      padding: 10px 0;
+      margin: 50px auto 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .offer {
+    &__container {
+      padding: 30px 10px 0;
+      margin-bottom: 50px;
+    }
+    
+    &__title {
+      font-size: 48px;
+    }
+    
+    &__gallery {
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    
+    &__gallery-img {
+      height: 300px;
+    }
+    
+    &__custom-img {
+      height: 350px;
+    }
+    
+    &__custom-title {
+      font-size: 48px;
+    }
+    
+    &__custom-text {
+      font-size: 16px;
+    }
+    
+    &__custom-btn {
+      width: 130px;
+      font-size: 16px;
+      padding: 9px 0;
+      margin: 40px auto 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .offer {
+    &__container {
+      padding: 25px 8px 0;
+      margin-bottom: 40px;
+    }
+    
+    &__title {
+      font-size: 40px;
+    }
+    
+    &__gallery {
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+    
+    &__gallery-img {
+      height: 250px;
+      border-radius: 15px;
+    }
+    
+    &__custom {
+      gap: 25px;
+    }
+    
+    &__custom-img {
+      height: 300px;
+      border-radius: 15px;
+    }
+    
+    &__custom-title {
+      font-size: 40px;
+    }
+    
+    &__custom-text {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    
+    &__custom-btn {
+      width: 120px;
+      font-size: 15px;
+      padding: 8px 0;
+      margin: 35px auto 0;
+      border-radius: 15px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .offer {
+    &__container {
+      padding: 20px 6px 0;
+      margin-bottom: 35px;
+    }
+    
+    &__title {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    
+    &__gallery {
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    
+    &__gallery-img {
+      height: 220px;
+    }
+    
+    &__custom-img {
+      height: 280px;
+    }
+    
+    &__custom-title {
+      font-size: 36px;
+    }
+    
+    &__custom-text {
+      font-size: 14px;
+    }
+    
+    &__custom-btn {
+      width: 110px;
+      font-size: 14px;
+      padding: 7px 0;
+      margin: 30px auto 0;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .offer {
+    &__container {
+      padding: 15px 5px 0;
+      margin-bottom: 30px;
+    }
+    
+    &__title {
+      font-size: 32px;
+    }
+    
+    &__gallery {
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+    
+    &__gallery-img {
+      height: 200px;
+      border-radius: 12px;
+    }
+    
+    &__custom {
+      gap: 20px;
+    }
+    
+    &__custom-img {
+      height: 250px;
+      border-radius: 12px;
+    }
+    
+    &__custom-title {
+      font-size: 32px;
+    }
+    
+    &__custom-text {
+      font-size: 13px;
+    }
+    
+    &__custom-btn {
+      width: 100px;
+      font-size: 13px;
+      padding: 6px 0;
+      margin: 25px auto 0;
+      border-radius: 12px;
     }
   }
 }
